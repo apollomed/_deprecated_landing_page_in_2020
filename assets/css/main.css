@@ -1994,7 +1994,7 @@ input, select, textarea {
 	}
 
 		.features section {
-			padding: 3.5em 3em 1em 7em ;
+			padding: 0.5em 3em 1em 3em ;
 			width: 50%;
 			border-top: solid 1px rgba(255, 255, 255, 0.15);
 			position: relative;
@@ -2022,8 +2022,8 @@ input, select, textarea {
 				-ms-transform: scale(1);
 				transform: scale(1);
 				position: absolute;
-				left: 3em;
-				top: 3em;
+				left: 0em;
+				top: 0em;
 				opacity: 1;
 			}
 
@@ -2525,7 +2525,7 @@ input, select, textarea {
 			display: block;
 			background: #ffffff;
 			border-radius: 100%;
-			color: rgb(234,240,236);
+			color: #2D9F86;
 			text-align: center;
 			line-height: 2.5em;
 			margin: 0 0 1.3em 0;
@@ -3524,7 +3524,7 @@ input, select, textarea {
 
 	#sidebar {
 		padding: 2.5em 2.5em 0.5em 2.5em ;
-		background: rgb(234,240,236);
+		background: #F1F5F3;
 		cursor: default;
 		height: 100vh;
 		left: 0;
@@ -3761,14 +3761,14 @@ input, select, textarea {
 			}
 
 			#sidebar nav a:before {
-				background: #aaaaaa;
+				background: #c3c6c6;
 			}
 
 			#sidebar nav a:after {
-				background-image: -moz-linear-gradient(to right, #aaaaaa, #111111);
-				background-image: -webkit-linear-gradient(to right, #aaaaaa, #111111);
-				background-image: -ms-linear-gradient(to right, #aaaaaa, #111111);
-				background-image: linear-gradient(to right, #aaaaaa, #111111);
+				background-image: -moz-linear-gradient(to right, #c3c6c6, #2D9F86);
+				background-image: -webkit-linear-gradient(to right, #c3c6c6, #2D9F86);
+				background-image: -ms-linear-gradient(to right, #c3c6c6, #2D9F86);
+				background-image: linear-gradient(to right, #c3c6c6, #2D9F86);
 				-moz-transition: max-width 0.2s ease;
 				-webkit-transition: max-width 0.2s ease;
 				-ms-transition: max-width 0.2s ease;
@@ -3874,7 +3874,7 @@ input, select, textarea {
 
 	#intro {
 		background-attachment: fixed;
-		background-image: url("images/intro.svg");
+		/*background-image: url("images/intro.svg");*/
 		background-position: top right;
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
