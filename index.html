@@ -95,8 +95,8 @@
 							</div>
 							<p>Please contact us to learn more about our offerings and ways we can work together.</p>
 							<div class="split style1">
-								<section>
-									<form method="post" action="#">
+								<section >
+									<form method="post" action="#" id="contactForms">
 										<div class="fields">
 											<div class="field half">
 												<label for="name">Name</label>
@@ -112,10 +112,14 @@
 											</div>
 										</div>
 										<ul class="actions">
-											<li><a href="" class="button submit">Send Message</a></li>
+											<li><a href="#" class="button" id="submit">Send Message</a></li>
 										</ul>
 									</form>
+									<div id="thankyou">
+										Thank you for contacting us. We will get back to you soon.
+									</div>
 								</section>
+								
 								<section>
 									<ul class="contact">
 										<li>
@@ -152,6 +156,43 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+    		<script>
+      			$("#thankyou").hide();
+			    let name = "";
+			    let email = "";
+			    let msg = "";
 
+			    $("#name").on("input", ()=>{
+			    	name = $("#name").val();
+			    });
+
+			    $("#email").on("input", ()=>{
+			    	email = $("#email").val();
+			    });
+
+			    $("#message").on("input", ()=>{
+			        msg = $("#message").val();
+			    });
+
+			    $("#submit").on("click", (e)=>{
+			        
+        			e.preventDefault();
+				    
+				    // send an email
+				    $("#contactForms").hide();
+				    $("#thankyou").show();      
+
+				    if (email !== ""){
+				      const url = "https://api.ormahealth.com/send-contact-email-from-landing";
+				      const urlParams = new URLSearchParams({name: name, 
+				                                      company: "na",
+				                                      phone: "na",
+				                                      from_email: email, 
+				                                      message: msg})
+
+				      fetch(url+"?"+urlParams);
+	  				}
+	      		});
+    		</script>
 	</body>
 </html>
